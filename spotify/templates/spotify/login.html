@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Dopify</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-image: url(../static/images/Background2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 40px;
+            max-width: 300px;
+            height: auto;
+        }
+        .login-form {
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #2a2b2f;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            font-weight: bold;
+        }
+        .login-form button {
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+        .login-image {
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        small {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+        }
+        small a {
+            color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../static/images/Paint.png" alt="Logo" class="logo">
+        <div class="login-form">
+            <img src="../static/images/Login.png" alt="Login Image" class="login-image">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="exampleInputEmail1" style="color: white;">Username</label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp" name="username" placeholder="Enter username..." required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" style="color: white;">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Enter password..." required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login!</button>
+                {% load socialaccount %}
+                <a href="{% provider_login_url 'google' %}">Login with Google</a>
+            </form>
+            <small><a href="{% url 'signup'%}">Don't have an account yet? Sign up now!</a></small>
+        </div>
+    </div>
+</body>
+</html>

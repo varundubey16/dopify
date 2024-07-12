@@ -1,0 +1,23 @@
+A. how to add Login/Logout functionality in your django application
+https://learndjango.com/tutorials/django-login-and-logout-tutorial
+
+B. how to add bootstrap CSS, any free template of bootstrap u want to ur django app (above django 4 methods)
+https://www.javatpoint.com/django-and-bootstrap
+https://www.w3schools.com/django/django_add_bootstrap5.php
+
+
+C. bootstrap templates (all free)
+https://getbootstrap.com/docs/4.0/examples/
+https://startbootstrap.com/themes
+
+
+D. How to google sign up in django?
+Google Developer (console) & create a new project
+Navigate to APIs & Services then Credentials
+click on Create Credentials then OAuth client ID.
+Select Web application as the application type.
+Add your authorized redirect URIs, i used localhost when running on laptop, so it might be like http://localhost:8000/accounts/google/login/callback/. this is default for running on backend loscalhosts
+OAuth client ID and secret
+add in the secret.json
+
+E. Sending mails by django//removed imple.
