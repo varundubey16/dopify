@@ -7,7 +7,9 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('play/<int:id>',views.playSong, name="play"),
     path('create',SongCreateView.as_view(), name="create"),
+#path('logingooglee/ NOT NOW USING OAUTH, cred in vad id
 
+    
     path('signup',views.signup, name="signup"),
     path('login',views.login,name="login"),
     path('logout',views.logout,name="logout"),
