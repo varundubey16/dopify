@@ -1,0 +1,14 @@
+Django
+django-admin-honeypot
+django-allauth
+pymysql
+python-decouple
+requests
+requests-html
+requests-oauthlib
+dash
+dash-core-components
+dash-html-components
+dash-table
+dateutils
+PyAudio
