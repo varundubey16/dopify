@@ -25,7 +25,7 @@ SECRET_KEY = '38+jc4wdoc_(fzq8*x%0k5!^jk29ix6fvqay&+#ysus-a_on#n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1:8000','127.0.0.1','192.168.1.36','192.168.122.37:8000','192.168.122.37','192.168.81.37']
+ALLOWED_HOSTS = ['127.0.0.1:8000','127.0.0.1','192.168.1.36','192.168.122.37:8000','192.168.122.37','192.168.81.37','.vercel.app']
 
 
 # Application definition 
